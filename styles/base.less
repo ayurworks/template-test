@@ -117,51 +117,29 @@ body.collection-type-blog.view-list {
 /* Style for the calendar block field 
 ***************************************************/
 #calendarBlocks {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
-  gap: 20px; /* Space between each block */
-  margin: 0 auto; /* Center the grid */
-  width: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important; /* 7 equal columns */
+  gap: 20px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-/* Ensure each block takes the full width of its grid cell */
 #calendarBlocks .sqs-block {
-  width: 100%; /* Each block spans the full width of its grid column */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
-/* Make sure content within each block is aligned */
 #calendarBlocks .sqs-block .sqs-block-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  #calendarBlocks {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  #calendarBlocks {
-    grid-template-columns: 1fr; /* 1 column on mobile devices */
-  }
-}
-
-/* Break grid and stack blocks on small screens */
-@media screen and (max-width: 640px) {
-  /* Add any additional styles here */
-  #calendarBlocks {
-    grid-template-columns: 1fr; /* Ensure only one column on smaller screens */
-  }
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 
