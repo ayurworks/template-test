@@ -105,6 +105,41 @@ body.collection-type-blog.view-list {
   }
 }
 
+/* Style for the calendar block field */
+#calendarBlocks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+  gap: 20px; /* Space between each block */
+  margin: 0 auto; /* Center the grid */
+  width: 100%;
+}
+
+/* Ensures each block fills the available grid cell */
+#calendarBlocks .sqs-block {
+  width: 100%; /* Ensures each block spans the full width of its grid column */
+}
+
+/* Make sure content within each block is aligned */
+#calendarBlocks .sqs-block .sqs-block-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #calendarBlocks {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  #calendarBlocks {
+    grid-template-columns: 1fr; /* 1 column on mobile devices */
+  }
+}
 
 
 /* Break grid and stack blocks on small screens
