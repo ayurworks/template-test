@@ -25,12 +25,11 @@
 
       <!-- cms content injection point -->
       <main class="content-container" role="main" data-content-field="main-content">
-       {squarespace.main-content}
+        <squarespace:block-field id="calendarBlocks" columns="12" />
       </main>
-
       <!--Footer with open block field -->
       <footer class="site-footer">
-        <squarespace:block-field id="footerBlocks" columns="12" />
+        <squarespace:block-field id="customFooterBlocks" columns="12" />
       </footer>
 
     </div>
