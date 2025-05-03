@@ -105,7 +105,17 @@ body.collection-type-blog.view-list {
   }
 }
 
-/* Style for the calendar block field */
+
+/* Break grid and stack blocks on small screens
+***************************************************/
+
+@media screen and (max-width: 640px) {
+  @import 'sqs-grid-breaker';
+}
+
+
+/* Style for the calendar block field 
+***************************************************/
 #calendarBlocks {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
@@ -114,9 +124,14 @@ body.collection-type-blog.view-list {
   width: 100%;
 }
 
-/* Ensures each block fills the available grid cell */
+/* Ensure each block takes the full width of its grid cell */
 #calendarBlocks .sqs-block {
-  width: 100%; /* Ensures each block spans the full width of its grid column */
+  width: 100%; /* Each block spans the full width of its grid column */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 /* Make sure content within each block is aligned */
@@ -141,12 +156,12 @@ body.collection-type-blog.view-list {
   }
 }
 
-
-/* Break grid and stack blocks on small screens
-***************************************************/
-
+/* Break grid and stack blocks on small screens */
 @media screen and (max-width: 640px) {
-  @import 'sqs-grid-breaker';
+  /* Add any additional styles here */
+  #calendarBlocks {
+    grid-template-columns: 1fr; /* Ensure only one column on smaller screens */
+  }
 }
 
 
